@@ -1,0 +1,38 @@
+<form [formGroup]="searchWar" (ngSubmit)="onFetch()" style="text-align: center;">
+
+  <label for="usersearch"></label>
+
+  <select name="usersearch" formControlName="usersearch" id='usersearch' required>
+
+    <option *ngFor="let usersearch of usersearches" 
+    value="{{usersearch.value}}">{{usersearch.view}}</option>
+
+  </select>
+
+  <label for="userInput"></label>
+  <input type="text" name="userInput" formControlName='userInput' id="userInput" required>
+
+  <button [disabled] = "!useBtn"
+  type="submit">
+{{ useBtn === false ? 'Arming Proton Torpedoes' : 'Proceed' }}
+</button>
+
+</form>
+
+<p style="text-align: center;">{{_wars | json}}</p>
+
+
+
+<!-- 
+<div id="search-component" style="text-align: center;">
+  <h4>Star Wars Search</h4>
+
+  <select>
+    <option value="people">People</option>
+    <option value="ships">Ships</option>
+    <option value="films">Films</option>
+  </select>
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+  <button>Search</button>
+</div> -->

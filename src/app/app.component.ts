@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Star-Wars-API';
-}
+  title: string = 'Star Wars: Return of the App';
+  // private apiUrl = 'https://swapi.co/api/';
+
+};
